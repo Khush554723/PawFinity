@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20230405/original/pngtree-cartoon-dog-puppy-sticker-cute-png-image_9029369.png">
+    <title>Paw-Puffs | Future Pet Adoption</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="particles" id="particles" aria-hidden="true"></div>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container-flex">
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="contact-info">
+                    <span><i class="fa-solid fa-phone"></i> +91 9996663331</span>
+                    <span><i class="fa-solid fa-clock"></i> MON-SAT (10AM-5PM)</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/golden-retriever.png" alt="Paw-Puffs Logo">
+                <span>Paw-Puffs</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#adopt">ADOPTION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2 class="glitch">Paws, Play, and Forever Homes <i class="fa-solid fa-paw"></i></h2>
+                <p>Every dog deserves a lap, a nap, and a forever home.</p>
+                
+                <form id="breedSearchForm" class="search-box">
+                    <input type="search" id="breedInput" placeholder="Search Your Favorite Breed..." required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="process" id="about">
+            <h2 class="section-title">🚀 Adoption Process</h2>
+            <div class="grid-container">
+                <div class="process-card">
+                    <i class="fa-solid fa-dog"></i>
+                    <h3>Selection</h3>
+                    <p>Browse our pups and find your friend.</p>
+                </div>
+                <div class="process-card">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <h3>Process</h3>
+                    <p>Complete the application with love.</p>
+                </div>
+                <div class="process-card">
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Meet</h3>
+                    <p>Meet your paw-some match in person.</p>
+                </div>
+                <div class="process-card">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <h3>Home</h3>
+                    <p>Your furry friend is home forever!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button class="fab" id="adoptBtn" title="Donate a Dog">
+    <i class="fa-solid fa-plus"></i>
+</button>
+
+<div class="modal" id="donationModal" style="display: none;">
+    <div class="modal-content">
+        <header>
+            <h3>🐾 List a Dog for Donation</h3>
+            <span class="close" id="closeDonation">&times;</span>
+        </header>
+        <form id="donateDogForm" class="styler-form">
+            <input type="text" id="donorName" placeholder="Your Name" required>
+            <input type="text" id="dogBreed" placeholder="Dog Breed (e.g. Beagle)" required>
+            <input type="number" id="dogAge" placeholder="Dog Age (Years)" required>
+            <textarea id="dogReason" placeholder="Reason for donation / Brief description" required></textarea>
+            <button type="submit" class="submit-glow-btn">Post for Donation 🚀</button>
+        </form>
+    </div>
+</div>
+
+<div class="modal" id="adoptionModal" style="display: none;">
+    <div class="modal-content">
+        <header>
+            <h3>🐕 Donate/Adopt Your Dog</h3>
+            <span class="close" id="closeModal">&times;</span>
+        </header>
+        <form id="donateForm" class="grid-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="text" placeholder="Dog Breed" required>
+            <button type="submit" class="btn-primary">Submit Request</button>
+        </form>
+    </div>
+</div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3>Paw-Puffs</h3>
+                <p>Helping furry friends find their forever homes in Gurgaon since 2025.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#">Careers</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Talk to Us</h4>
+                <p>PawPuffs@gmail.com</p>
+                <p>+91 0000 111 222</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 | Made with ❤️ by _Vishu_sOP</p>
+        </div>
+    </footer>
+
+    <div class="chat-container">
+        <button id="pawChatToggle" class="chat-trigger"><i class="fa-solid fa-comment-dots"></i></button>
+        <div id="pawChatWindow" class="chat-box" style="display: none;">
+            <div class="chat-header">PawBot AI <span id="pawClose">&times;</span></div>
+            <div id="pawMessages" class="chat-body"></div>
+            <div class="chat-input">
+                <input type="text" id="pawInput" placeholder="Ask me...">
+                <button id="pawSend"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="adoptionModal" style="display: none;">
+        <div class="modal-content">
+            <header>
+                <h3>🐕 Donate Your Dog</h3>
+                <span class="close" id="closeModal">&times;</span>
+            </header>
+            <form id="donateForm" class="grid-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="text" placeholder="Dog Breed" required>
+                <input type="number" placeholder="Age (Years)" required>
+                <textarea placeholder="About your dog..." rows="3"></textarea>
+                <button type="submit" class="btn-primary">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

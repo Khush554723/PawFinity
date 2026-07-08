@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20230405/original/pngtree-cartoon-dog-puppy-sticker-cute-png-image_9029369.png">
+    <title>Paw-Puffs | Dog Gallery</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="gallery-style.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <div class="gallery-container">
+        <header class="gallery-nav">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-chevron-left"></i> BACK TO HOME
+            </a>
+            <h1 class="glitch-text">GALLERY</h1>
+        </header>
+
+        <section class="hero-glass-card">
+            <h2 id="breedNameDisplay">Breed Loading...</h2>
+            <p id="breedDescription">Fetching amazing photos and details for your future companion.</p>
+            <div class="action-btn-container">
+                <button class="btn-adopt-main" id="adoptBtnMain">
+                    <i class="fas fa-heart"></i> Start Adoption Process
+                </button>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery-grid" id="imageGrid"></div>
+        </section>
+
+        <div class="modal-overlay" id="adoptionModal">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <h3>🐕 Adoption Application</h3>
+                    <span class="close-x" id="closeModalBtn">&times;</span>
+                </div>
+                <form id="adoptionForm" class="styler-form">
+                    <div class="input-wrap">
+                        <label>Your Name</label>
+                        <input type="text" id="applicantName" placeholder="John Doe" required>
+                    </div>
+                    <div class="input-wrap">
+                        <label>Email Address</label>
+                        <input type="email" id="applicantEmail" placeholder="john@example.com" required>
+                    </div>
+                    <div class="input-wrap">
+                        <label>Why adopt this breed?</label>
+                        <textarea rows="3" id="adoptionReason" placeholder="Tell us about your home..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-glow-btn" id="submitBtn">Submit Request 🐾</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="gallery-script.js"></script>
+</body>
+</html>

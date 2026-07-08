@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Dog - PawPuffs</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #fff8f0;
+            text-align: center;
+        }
+
+        .upload-container {
+            margin-top: 50px;
+        }
+
+        input, textarea {
+            display: block;
+            width: 50%;
+            margin: 10px auto;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #ff914d;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        img {
+            width: 200px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Upload Your Dog 🐶</h1>
+
+    <div class="upload-container">
+        <form id="dogForm">
+            <input type="text" id="dogName" placeholder="Dog Name" required>
+            <input type="text" id="dogBreed" placeholder="Breed" required>
+            <input type="number" id="dogAge" placeholder="Age" required>
+            <textarea id="dogDesc" placeholder="About your dog"></textarea>
+            <input type="file" id="dogImage" accept="image/*" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="preview"></div>
+    </div>
+
+    <script>
+        document.getElementById("dogForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("dogName").value;
+            const breed = document.getElementById("dogBreed").value;
+            const age = document.getElementById("dogAge").value;
+            const desc = document.getElementById("dogDesc").value;
+            const file = document.getElementById("dogImage").files[0];
+
+            const reader = new FileReader();
+
+            reader.onload = function() {
+                document.getElementById("preview").innerHTML = `
+                    <h2>${name}</h2>
+                    <img src="${reader.result}">
+                    <p>${breed} | ${age} years</p>
+                    <p>${desc}</p>
+                `;
+            };
+
+            reader.readAsDataURL(file);
+        });
+    </script>
+
+</body>
+</html>

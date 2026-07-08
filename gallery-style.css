@@ -1,0 +1,212 @@
+/* --- Global Theme Sync --- */
+:root {
+    --primary: #ff7e5f;
+    --secondary: #feb47b;
+    --accent: #00f2fe;
+    --dark: #0f172a;
+    --darker: #070b14;
+    --glass: rgba(255, 255, 255, 0.05);
+    --text: #f8fafc;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2', sans-serif;
+    background-color: var(--darker);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Background Particles (Home screen ki tarah) */
+.particles {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #1e293b 0%, #070b14 100%);
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- Header & Back Button --- */
+.gallery-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.back-link:hover {
+    color: var(--primary);
+    transform: translateX(-5px);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+/* --- Breed Info Card (Glassmorphism) --- */
+.hero-glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 30px;
+    border-radius: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.glitch-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.breed-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(0, 242, 254, 0.1);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* --- Action Button --- */
+.btn-adopt-main {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 10px 20px rgba(255, 126, 95, 0.3);
+}
+
+.btn-adopt-main:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(255, 126, 95, 0.5);
+}
+
+/* --- Gallery Grid --- */
+.gallery-section h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--primary);
+    padding-left: 15px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    cursor: zoom-in;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03) translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 30px rgba(0, 242, 254, 0.2);
+}
+
+/* --- Modal Style (Home Screen Theme) --- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    display: none; /* JS will toggle */
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-card {
+    background: var(--dark);
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 30px;
+    border: 1px solid var(--primary);
+    position: relative;
+}
+
+.styler-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-wrap input, .input-wrap textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 12px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-wrap input:focus { border-color: var(--accent); }
+
+.submit-glow-btn {
+    background: var(--primary);
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* --- Mini Chat Box --- */
+.chat-widget-mini {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.trigger-btn {
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: none; color: var(--darker);
+    font-size: 1.5rem; cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
+}
